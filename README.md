@@ -24,7 +24,6 @@ CleanResize is a Beta version, so it's possible to encounter bugs.
 First, enter the original size of your image. Then, specify the height or the width wanted for the resizing and press "Calculate".
 Optionally, you can resize an image with the calculated dimensions by clicking on "Resize an image...".
 
-
 Auteur / Author
 -----------------
 
