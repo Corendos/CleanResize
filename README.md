@@ -6,7 +6,6 @@ A propos / About
 
 Utilitaire pour calculer la taille d'un redimensionnement proportionnel et/ou redimensionner des images facilement et rapidement.
 
-_________________
 
 Utility software for calculate the size of a proportional resizing  and/or resizing images easily and quickly.
 
@@ -18,8 +17,6 @@ CleanResize est en version Bêta, il est donc possible de rencontrer des bugs.
 
 En premier, entrez la taille original de votre image. Ensuite précisez la hauteur ou la largeur voulu pour le redimensionnement puis appuyez sur "Calculer".
 Optionnellement, vous pouvez redimensionner une image avec les dimensions calculées en cliquant sur "Redimensionner une image...".
-
-___________________
 
 
 CleanResize is a Beta version, so it's possible to encounter bugs. 
