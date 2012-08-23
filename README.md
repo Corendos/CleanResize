@@ -25,8 +25,8 @@ First, entez the original size of your image. Then, specify the height or the wi
 Optionally, you can resize an image with the calculated dimensions by clicking on "Resize an image...".
 
 
-Auteurs / Authors
-=================
+Auteur / Author
+-----------------
 
 Alexandre Lion - main developer (http://alexion.fr/)
 
