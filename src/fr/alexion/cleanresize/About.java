@@ -26,11 +26,11 @@ public class About extends JDialog {
 		getContentPane().setLayout(null);
 		
 		JLabel label = new JLabel(messages.getString("aut_info"));
-		label.setBounds(112, 73, 118, 14);
+		label.setBounds(112, 73, 212, 14);
 		getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("v 1.0 Beta");
-		label_1.setBounds(150, 98, 60, 14);
+		label_1.setBounds(150, 98, 132, 14);
 		getContentPane().add(label_1);
 		
 		JButton button = new JButton("Ok");
@@ -40,7 +40,7 @@ public class About extends JDialog {
 			}
 		});
 
-		button.setBounds(278, 121, 46, 23);
+		button.setBounds(279, 134, 53, 23);
 		getContentPane().add(button);
 		
 		JLabel alexion = new JLabel(new ImageIcon(getClass().getResource("/images/alexion.png"))); 
