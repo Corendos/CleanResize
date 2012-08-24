@@ -1,15 +1,11 @@
 package fr.alexion.cleanresize;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsEnvironment;
 import java.awt.RenderingHints;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -22,7 +18,6 @@ import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
-import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -82,8 +77,15 @@ public class MainWindow extends JFrame {
 	private void initComposant(){
 		
 
-		submit.setPreferredSize(new Dimension(110, 25));
-		openImage.setPreferredSize(new Dimension(180, 25));
+		if(isUnix()) {
+			submit.setPreferredSize(new Dimension(110, 25));
+			openImage.setPreferredSize(new Dimension(250, 25));
+			
+		} else {
+			submit.setPreferredSize(new Dimension(110, 25));
+			openImage.setPreferredSize(new Dimension(180, 25));
+		}
+		
 		JPanel origine = new JPanel();
 		origine.setPreferredSize(new Dimension(380, 100));
 		origine.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.gray), messages.getString("current_image_txt")));
@@ -93,10 +95,10 @@ public class MainWindow extends JFrame {
 		tf_a_h.setBounds(146, 51, 170, 25);
 		tf_a_h.setPreferredSize(text_field);
 		origine.setLayout(null);
-		lbl_a_w.setBounds(45, 26, 78, 14);
+		lbl_a_w.setBounds(25, 26, 114, 14);
 		origine.add(lbl_a_w);
 		origine.add(tf_a_w);
-		lbl_a_h.setBounds(45, 56, 78, 14);
+		lbl_a_h.setBounds(25, 56, 114, 14);
 		origine.add(lbl_a_h);
 		origine.add(tf_a_h);
 		
@@ -109,10 +111,10 @@ public class MainWindow extends JFrame {
 		tf_b_h.setBounds(147, 51, 170, 25);
 		tf_b_h.setPreferredSize(text_field);
 		after.setLayout(null);
-		lbl_b_w.setBounds(48, 26, 75, 14);
+		lbl_b_w.setBounds(25, 26, 124, 14);
 		after.add(lbl_b_w);
 		after.add(tf_b_w);
-		lbl_b_h.setBounds(48, 56, 78, 14);
+		lbl_b_h.setBounds(25, 56, 114, 14);
 		after.add(lbl_b_h);
 		
 
@@ -287,6 +289,16 @@ public class MainWindow extends JFrame {
 	public void messageInfo(String t, String m)
 	{
 		JOptionPane.showMessageDialog(null, m, t, JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	/*
+	 * Detect if the system is a Linux/Unix system
+	 * 
+	 * @return <code>true</code> if it's a linux system or <code>false</code> if isn't a linux system
+	 */
+	public static boolean isUnix() {
+		String os = System.getProperty("os.name").toLowerCase();
+		return (os.indexOf("nix") >= 0 || os.indexOf("nux") >= 0);
 	}
 
 
